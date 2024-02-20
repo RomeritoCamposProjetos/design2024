@@ -3,3 +3,5 @@
 Nesta página, você tem acesso aos slides da disciplina.
 
 ## Slides
+
+- [Aula 01 - Apresentação](../slides/00_apresentacao/apresentacao.pdf)
