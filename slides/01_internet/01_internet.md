@@ -21,7 +21,7 @@ style: |
     }
 ---
 
-![w:120 h:120](../../../assets/ifrn-vertical.png)
+![w:120 h:120](../../assets/ifrn-vertical.png)
 # Design Web e Arquitetura da Informação
 Prof. Romerito Campos
 
