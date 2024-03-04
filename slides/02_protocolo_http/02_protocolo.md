@@ -1,7 +1,7 @@
 ---
 marp: false
 theme: gaia
-footer: Programação de Sistemas para Internet - Prof. Romerito Campos
+footer: Design Web e Arquitetura da Informação - Prof. Romerito Campos
 _class: lead
 size: 16:9
 backgroundColor: #fff
@@ -22,7 +22,7 @@ style: |
 ---
 
 ![w:120 h:120](../../assets/ifrn-vertical.png)
-# Programação de Sistemas para Internet
+# Design Web e Arquitetura da Informação
 Prof. Romerito Campos
 
 ---
