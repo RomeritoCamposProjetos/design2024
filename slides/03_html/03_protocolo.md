@@ -1,5 +1,5 @@
 ---
-marp: true
+marp: false
 theme: gaia
 footer: Design Web e Arquitetura da Informação - Prof. Romerito Campos
 _class: lead
