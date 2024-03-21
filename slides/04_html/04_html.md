@@ -217,6 +217,33 @@ img[alt~="center"] {
 
 # HTML - Tipos de Links
 
+<style scoped>
+img[alt~="center"] {
+  display: block;
+  margin: 0 auto;  
+}
+</style>
+
+- O projeto vai ser organizado em pastas da seguinte forma:
+
+![width:600px center](./images/07-relative.png)
+
+---
+# HTML - Tipos de Links
+
+- Condire que há a pasta onde todos os arquivos estão: `link-images`
+  
+- Nesta pasta vamos ter a página inicial: `links.html`.
+
+- Vamos ter outras duas pastas
+  - `extras: ` guarda as páginas restantes do projeto
+  - `imagens`: guarda as imagens que vamos utilizar
+
+
+- O que é necessário fazer é definir as páginas em si e adicionar os links de navegação. Os lnks serão **relativos**.
+
+---
+# HTML - Tipos de Links
 
 ---
 # Referências
