@@ -88,22 +88,20 @@ centrarlizar slide
 
 ---
 
-# HTML
+# HTML - Estudo de Caso
 
 <style scoped>
     img {
         margin: -20px 0 0 70px;
-        
     }
 </style>
 
-Vamos considerar o seguinte projeto como contexto da aula: 
 
 ![width:900px](./images/00contexto.png)
 
 
 ---
-# HTML 
+# HTML  - Estudo de Caso
 
 - Neste contexto, vamos ter:
   - Navegação em páginas internas do projeto
@@ -114,9 +112,112 @@ Vamos considerar o seguinte projeto como contexto da aula:
 
 ---
 
-# HTML
+# HTML - Links e âncoras
+
+<style scoped>
+img[alt~="center"] {
+  display: block;
+  margin: 0 auto;
+}
+</style>
+
+- Há um elemento definido pela tag `<a>` que é definido como âncora(*anchor*).
+- A aplicar a tag `<a>` com algum conteúdo, indicamos que estamos definido uma âncora.
 
 
+![width:480px center](./images/01-anchor.png)
 
+
+---
+# HTML - Links e âncoras
+
+<style scoped>
+img[alt~="center"] {
+  display: block;
+  margin: 0 auto;
+}
+</style>
+
+- É possível mudar a semântica do elemento `<a>` através de um de seus atributos: **href**
+
+- Ao adicionar este atributo, estamos criando um *link* que permite realizar navegação entre páginas
+
+![width:530px center](./images/02-anchor.png)
+
+---
+
+# HTML - Links e âncoras
+<style scoped>
+img[alt~="center"] {
+  display: block;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+</style>
+- Até aí tudo bem. Mas na prática qual a diferença?
+- A diferença visual na página é a ilustrada abaixo:
+
+![width:730px center](./images/03-exemplo.png)
+
+---
+
+# HTML - Tipos de links
+
+<style scoped>
+img[alt~="center"] {
+  display: block;
+  margin: 0 auto; 
+  border: 1px solid black;
+}
+</style>
+
+- **Links absolutos   **
+
+![width:800px center](./images/04-absolute.png)
+
+
+---
+# HTML - Tipos de Links
+
+<style scoped>
+img[alt~="center"] {
+  display: block;
+  margin: 0 auto;  
+}
+</style>
+
+- Exemplo de uso de **links absolutos** em uma página:
+
+![width:850px center](./images/05-absoute.png)
+
+---
+# HTML - Tipos de Links
+
+<style scoped>
+img[alt~="center"] {
+  display: block;
+  margin: 0 auto;  
+}
+</style>
+
+- Os **links absolutos** permite navegar de nossas páginas para outras páginas, por exemplo.
+
+![width:1200px center](./images/06-absolute.png)
+
+---
+
+# HTML - Tipos de Links
+
+- **Links relativos**
+  - O contexto dos links relativos é permitir a nevegação dentro do próprio site. 
+- Considere a figura inicial desta aula. 
+  - Há páginas que possuem setas (ligações dentro do próprio site)
+
+---
+
+# HTML - Tipos de Links
+
+
+---
 # Referências
 
