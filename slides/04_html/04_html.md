@@ -244,6 +244,134 @@ img[alt~="center"] {
 
 ---
 # HTML - Tipos de Links
+<style scoped>
+img[alt~="center"] {
+  display: block;
+  margin: 0 auto;  
+}
+</style>
+O códgio abaixo ilustra como definimos um link a parti da página `links.html` para uma página dentro da pasta `extras/`:
+
+![width:700px center](./images/08-relative.png)
+
+---
+# HTML - Tipos de Links
+
+- Observe na figura anterior que dentro do contexto do site, não é necessário especificar o domínio e o esquema URL.
+
+- Apenas precisamos localizar o arquivo para o qual a navegação prossegue. 
+
+- Neste exemplo, a nevagação sai de uma página na raiz do projeto para um arquivo dentro de uma pasta.
+
+- O próximo exemplo mostra como é o link na direção oposta (digamos assim).
+
+---
+
+# HTML - Tipos de links
+<style scoped>
+img[alt~="center"] {
+  display: block;
+  margin: 0 auto;  
+}
+</style>
+- link relativo considerando arquivo dentro de pastas dentro do projeto:
+
+![width:550px center](./images/09-relative.png)
+
+---
+
+<style scoped>
+    section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+</style> 
+
+# Imagens
+
+
+---
+
+# Imagens
+
+- As imagens são definidas fora do conteúdo da página HTML
+
+- Podemos referencias as imagens dentro das páginas com links relativos ou absolutos.
+
+- A tag utilizada para adicionar imagens é `<img>`
+
+- Adcionamente, temos o atributo `src` que permite indicar onde localizar a imagem
+
+---
+
+# Imagens - Formatos
+
+- As imagens podem ser de tipos diferentes como: PNG, JPEG, SVG, GIF.
+
+**Atividade:**
+  - Pesquisar as diferenças entre esses tipos e vantagens/desvantagens de uso.
+
+---
+# Imagens - Exemplo
+
+- Exmeplo de Imagem com link absoluto
+
+![width:1200px](./images/10-imagen.png)
+
+- Neste fragmente de código, o `src` está definido para um link na web onde está localizada a imagem.
+
+
+
+--- 
+# Imagens - Dimensões
+
+<style scoped>
+img[alt~="center"] {
+  display: block;
+  margin: 0 auto;  
+}
+</style>
+
+- Podemos definir as dimensões que queremos para as imagens:
+
+![width:1000px center](./images/11-imagem.png)
+
+- Neste caso, a altura será definida proporcional a largura `width`
+
+---
+# Imagens - Dimensões
+<style scoped>
+img[alt~="center"] {
+  display: block;
+  margin: 0 auto;  
+}
+</style>
+
+
+- Neste trecho de código, temos a definição da segunda imagem com `width` e `height` definidos. 
+
+![width:1000px center](./images/12-imagem.png)
+
+- Veja o resultado no navegador com os códigos de exemplo.
+
+---
+# Imagens - Texto alternativo
+
+<style scoped>
+img[alt~="center"] {
+  display: block;
+  margin: 0 auto;  
+}
+</style>
+
+- Quando não é possível renderizar a imagem na página por alguma razão, podemos adicionar um texto alternativo. 
+  
+- Isso é realizado por meio do atributo `alt="Texto Alternativo"` 
+
+![width:1180px center](./images/13-imagem.png)
+
 
 ---
 # Referências
