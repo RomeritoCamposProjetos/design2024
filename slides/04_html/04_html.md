@@ -171,7 +171,7 @@ img[alt~="center"] {
 }
 </style>
 
-- **Links absolutos   **
+- **Links absolutos**
 
 ![width:800px center](./images/04-absolute.png)
 
@@ -250,7 +250,7 @@ img[alt~="center"] {
   margin: 0 auto;  
 }
 </style>
-O códgio abaixo ilustra como definimos um link a parti da página `links.html` para uma página dentro da pasta `extras/`:
+O código abaixo ilustra como definimos um link a partir da página `links.html` para uma página dentro da pasta `extras/`:
 
 ![width:700px center](./images/08-relative.png)
 
@@ -298,7 +298,7 @@ img[alt~="center"] {
 
 - As imagens são definidas fora do conteúdo da página HTML
 
-- Podemos referencias as imagens dentro das páginas com links relativos ou absolutos.
+- Podemos referenciar as imagens dentro das páginas com links relativos ou absolutos.
 
 - A tag utilizada para adicionar imagens é `<img>`
 
@@ -316,7 +316,7 @@ img[alt~="center"] {
 ---
 # Imagens - Exemplo
 
-- Exmeplo de Imagem com link absoluto
+- Exemplo de Imagem com link absoluto
 
 ![width:1200px](./images/10-imagen.png)
 
@@ -373,6 +373,6 @@ img[alt~="center"] {
 ![width:1180px center](./images/13-imagem.png)
 
 
----
-# Referências
+<!-- --- -->
+<!-- # Referências -->
 
