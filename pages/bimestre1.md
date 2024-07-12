@@ -11,3 +11,5 @@ Nesta página, você tem acesso aos slides da disciplina.
 - [Aula 03](../slides/03_html/03_protocolo.pdf): HTML
 HTML
 - [Aula 04](../slides/04_html/04_html.pdf): Links e Imagens
+- [Aula 05](../slides/05_review_greve/revisao.pdf): Revisão geral
+  - [Atividade](../slides/05_review_greve/atividade.pdf)
