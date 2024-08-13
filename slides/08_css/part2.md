@@ -133,7 +133,7 @@ para imagens
 <p class="warning">Esta mensagem é um aviso!!!</p>
 ```
 
-- Observe o uso do atributo **class**. Ele permite usar as classes definidas
+- Observe o uso do atributo `class`. Ele permite usar as classes definidas
 
 ---
 
@@ -389,6 +389,113 @@ p.warning.underlined {
 
 # CSS - Seletor de ID
 
+- Os seletores de ID tem como base o atributo `id` que podem ser adicionados aos elementos HTML
 
+```html
+<p id="aviso">Conteúdo do aviso</p>
+```
 
+- No código acima, utilizamos o atributo `id` incluindo-o no elemnto `<p>` 
+
+- É possível aplicar regras CSS a partir da seleção basead nos ids dos elementos
+
+--- 
+
+# CSS - Seletor de ID
+
+- Considerando o código abaixo:
+
+```html
+<p id="aviso">Conteúdo do aviso</p>
+```
+
+- Utilizamos o seguinte código em CSS para aplicar mudanças nas propriedades do parágrafo
+
+```css
+#aviso {
+    background-color: red;
+    color: white;
+}
+```
+
+--- 
+
+# CSS - Seletor de ID
+
+- Além de aplicarmos o símbolo **#** para identificar um ID na sintaxe do CSS.
+
+- o seletor se refere ao valor do atributo **id**.
+
+- A terceira diferença envolve a não possibilidade de ter dois id's com valores iguais no código HTML.
+
+---
+
+# CSS - Seletor de ID
+
+- Dado o código abaixo, o documento HTML só vai considerar o ID para o segundo parágrafo. 
+
+```html
+<p id="aviso">Conteúdo do aviso</p>
+<p id="aviso">Conteúdo do aviso</p>
+```
+
+- No entanto, o CSS ignora isso e aplica as propriedades aos dois elementos HTML.
+
+- Caso o id seja utilizado em código JavaScript, essa duplicada pode ser problemática.
+
+---
+
+<style scoped>
+    section {
+        display: flex;
+        flex-direction: column;
+    }
+    img[src*='png']{
+        border: 1px solid black;
+        margin: 0 25%;
+        border-radius: 25px
+    }
+</style> 
+
+# CSS - Seletor de ID
+
+- Exemplo de seletor de ID
+![w:600px](./img/seletor05.png)
+
+---
+
+# CSS - Seletor de ID
+
+- Código do exemplo anterior:
+
+```css
+ #aviso {
+    background-color: rgb(235, 148, 148);
+    color: rgb(128, 0, 0);
+    border-radius: 25px;
+    border: 1px solid rgb(128, 0, 0);
+    padding: 20px;
+}
+```
+
+```html
+    <p id="aviso">Aviso usando seletor de ID</p>
+```
+
+---
+
+<style scoped>
+    h3 {
+        text-align: center;
+    }
+</style>
+
+# CSS - Seletor de ID
+
+### Desafio
+
+- Desafio: escreva um regra CSS que tenha como seletor um seletor de ID.
+- Aplique o seletor em elementos HTML duplicando o valor do ID nos elementos
+- Veja o resultado
+- Pesquisa o problema envolvendo a duplicata de ids no HTML (por duplicada ententa dois elementos cujos ids sejam iguais)
 
