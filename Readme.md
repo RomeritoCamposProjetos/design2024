@@ -12,6 +12,7 @@ Para produção do material, são utilizadas ferramentas tanto a nível de desen
 ## Slides
 
 - [Bimestre 01](./pages/bimestre1.md)
+- [Bimestre 02](./pages/bimestre2.md)
 
 ## Materiais
 
