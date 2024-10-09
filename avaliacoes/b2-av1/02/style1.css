@@ -1,0 +1,114 @@
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+}
+
+.container {
+    height: 100%;
+    background-color: bisque;
+}
+
+.nav {
+    height: 100px;
+    border-bottom: 2px solid grey;
+    background-color: rgb(193, 193, 193);
+}
+
+.nav ul li{
+    display: inline-block;
+    font-size: 20px;
+    padding: 20px 20px;
+    width: 100px;
+    text-align: center;
+}
+
+.nav ul li:hover {
+    background-color: rgb(61, 61, 61);
+    color: white;
+}
+
+.nav ul {
+    text-align: right;
+    padding: 20px 20px;
+}
+
+.main {
+    height: 100%;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.box-img {
+    border: 1px solid black;
+    display: inline-block;
+    width: 20%;
+}
+
+.box-img img {
+    width: 300px;
+    padding: 20px;
+}
+
+img + p {
+    font-weight: bold;
+}
+
+/* Parte 2 */
+
+.header {
+    border-bottom: 5px solid black;
+    text-align: right;
+    padding: 30px;
+}
+
+.menu {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.menu ul li {
+    display: inline-block;
+    padding: 10px 10px;
+    width: 120px;
+    background-color: aquamarine;
+}
+
+.menu ul li.home {
+    background-color: aqua;
+}
+
+.content {
+    background-color: azure;
+    height: 100%;
+    padding: 40px 60px;
+    text-align: center;
+}
+
+.content > .post {
+    width: 30%;
+    display: inline-block;
+    text-align: left;
+    margin-right: 10px;
+}
+
+.post > h2 {
+    border-bottom: 2px solid black;
+    padding: 4px 8px;
+}
+
+.post h2 + p {
+    text-align: right;
+    color: brown;
+}
+
+.post p {
+    padding: 4px 8px;
+    text-align: justify;
+}
