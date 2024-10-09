@@ -1,0 +1,29 @@
+.featured-articles {
+    display: flex;
+    justify-content: space-between;
+}
+
+.featured-articles article {
+    margin: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: calc(33% - 40px); /* Ajuste para as margens */
+}
+
+.featured-articles h3 {
+    font-weight: bold;
+    color: orange;
+}
+
+.featured-articles a {
+    color: darkblue;
+    text-decoration: none;
+}
+
+.featured-articles a:hover {
+    text-decoration: underline;
+}
+
+h3 + p {
+    background-color: #ffffcc; /* Amarelo claro */
+}
