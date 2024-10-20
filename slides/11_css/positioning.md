@@ -194,7 +194,8 @@ Prof. Romerito Campos
 
 - Ao sair do local que seria sua posição original, o espaço que o elemento deveria ocupar é mantido.
 
-- VEjamos um exemplo para entender essas definições:
+- Vejamos um exemplo para entender essas definições [Código-Fonte](./exemplos2/):
+
 
 ---
 <style scoped>
