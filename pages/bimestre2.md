@@ -8,6 +8,8 @@ Nesta página, você tem acesso aos slides da disciplina.
 - [CSS](../slides/08_css/part2.pdf) - Seletor de Classe/Seletor de ID
 - [CSS](../slides/08_css/part3.pdf) - Seletor de Atributos
 - [CSS](../slides/09_css/part4.pdf) - Combinators 
+- [CSS](../slides/11_css/positioning.pdf) - position
+  - [Código](../slides/11_css/exemplos2/)
 
 
 ## Avaliações
