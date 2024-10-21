@@ -24,11 +24,11 @@ Prof. Romerito Campos
 
 # Plano de Aula
 
-- **Objetivo:** Compreender o da propriedade `position` 
+- **Objetivo:** Compreender o uso da propriedade `position` 
 
 - **Conteúdos**:
-  - Posistion: definição
-- Position: static, absolute, relative, sticky e fixed
+  - Position: definição
+  - position: static, absolute, relative, sticky e fixed
 
 ---
 
@@ -50,8 +50,8 @@ Prof. Romerito Campos
 - A propriedade `position` indica como podemos posicionar um elemento para sua renderização.
 
 - O valor padrão desta propriedade é `position: static`.
-    - Não é necessário indicar este valor
-    - Todos os elementos por definição já vem com esta propriedade defindia assim.
+    - Não é necessário indicar este valor;
+    - Todos os elementos por definição já vêm com esta propriedade definida para `static`.
 
 - Há 5 positions: `static`, `relative`, `absolute`, `fixed` e `sticky`.   
 
@@ -63,9 +63,9 @@ Prof. Romerito Campos
 
 - Basicamente, ele indica qual é o box que contém um elemento.
 
-- Por exemplo, a tag `<html>` é o containing block da tag `<body>`.
+- Por exemplo, a tag `<html>` é o **containing block** da tag `<body>`.
 
-- Ou seja, o containing block é o elemento pai em relação aos os elementos filhos.
+- Ou seja, o **containing block** é o elemento pai em relação aos elementos filhos.
 
 ---
 
@@ -81,19 +81,19 @@ Prof. Romerito Campos
 </body>
 ```
 
-- A tag `<body>` é o containing block do elemento `<div>`.
+- A tag `<body>` é o **containing block** do elemento `<div>`.
 
 ---
 
 # Position
 
-- É importante considerar o Containing block para saber onde o elemento começa a ser desenhando.
+- É importante considerar o **Containing block** para saber onde o elemento começa a ser desenhando.
 
 - Vimos que os elementos são desenhados na tela considerando o **fluxo normal de renderização**.
-    - Em idiomas cuja escrita é da esquerda para direita: português, inglês entre outros
-    - Portanto, o fluxo normal é o mesmo da escrita
+    - Em idiomas cuja escrita é da esquerda para direita: português, inglês entre outros;
+    - Portanto, o fluxo normal é o mesmo da escrita.
 
-- Além disso, devemos considerar que os elementos tem níveis de `block` ou `inline`.
+- Além disso, considere os níveis de `block` ou `inline`.
 
 ---
 # Position
@@ -134,7 +134,7 @@ Prof. Romerito Campos
 
 ---
 
-- Código do exemplo anterior
+- Código que produziu a imagem anterior
 
 ```html
 <body>
@@ -144,7 +144,7 @@ Prof. Romerito Campos
 </body>
 ```
 
-- O containing block da `div` é o `body`.
+- O **containing block** da `div` é o `body`.
 
 - Ele está no fluxo normal de renderização: esquerda para direita.
 
@@ -163,9 +163,9 @@ Prof. Romerito Campos
     }
 </style>
 
-- Essa noçãoé importante porque a propriedade position se relaciona com as properidades `left`, `top`, `bottom` e `right`.
+- Essa noçãoé importante porque a propriedade `position` se relaciona com as properidades `left`, `top`, `bottom` e `right`.
 
-- `top: 0` e `left:` 0 indica o canto superior esquerdo
+- `top: 0` e `left:0` indica o canto superior esquerdo
 
 - `top: 0` e `right: 0` indica o canto superior direito.
 
@@ -194,7 +194,7 @@ Prof. Romerito Campos
 
 - Ao sair do local que seria sua posição original, o espaço que o elemento deveria ocupar é mantido.
 
-- Vejamos um exemplo para entender essas definições [Código-Fonte](./exemplos2/):
+- Vejamos um exemplo para entender essas definições: [ex02.html](https://github.com/RomeritoCamposProjetos/design2024/blob/main/slides/11_css/exemplos2/ex02.html)
 
 
 ---
@@ -225,7 +225,7 @@ Prof. Romerito Campos
 
 ---
 
-- No primeiro conjunto de quadrados não temos alteração no fluxo de desenho.
+- No primeiro conjunto de quadrados não temos alteração no fluxo normal de renderização.
 
 - No segundo caso, perceba que o elmento foi deslocado para abaixo. 
     - Ele saí de sua posição original;
@@ -289,7 +289,7 @@ Prof. Romerito Campos
 
 - Além disso, ele não preserva o espaço original do elemento como acontece com `position: relative`.
 
-- Com o `position: absolute` é muito fácil compreender a ideia de **containing block** apresentado no início.
+- Com o `position: absolute` é muito fácil compreender a ideia de **containing block** apresentada no início.
 
 - Observe a imagem a seguir:
 
@@ -311,7 +311,7 @@ Prof. Romerito Campos
 
 ---
 
-- É notável que uma caixa esta sobrepondo a outroa. 
+- É notável que uma caixa esta sobrepondo a outra. 
 
 - No caso, a caixa com tom avermelhado está deslocada de sua posição. 
 
@@ -325,7 +325,7 @@ Prof. Romerito Campos
 
 ---
 
-- Portanto, o elemento considera o top: 0 como sendo o limite do `body`. Ele não considera a div.
+- Portanto, o elemento considera o `top: 0` como sendo o limite do `body`. Ele não considera a `div`.
 
 - A posição em relação a `left` permanece a posição que deveria ser a original no fluxo normal. Veja a regra CSS:
 
@@ -375,7 +375,7 @@ Prof. Romerito Campos
 
 ---
 
-- Na imagem do slide anterior, tempos o resultado da aplicação de `position: absolute` junto com `top` e `left`.
+- Na imagem do slide anterior, temos o resultado da aplicação de `position: absolute` junto com `top` e `left`.
 
 - O elemento será posicionado a partir da esquerda (`left`) da página na posição correspondende a 0. 
     - Isso corresponde a ficar na borda da página.
@@ -384,13 +384,16 @@ Prof. Romerito Campos
 
 - Isso acontece porque o **containing block** padrão para `position: absolute` é o viewport (dimensão da página). 
 
+- Veja o exemplo completo [aqui](https://github.com/RomeritoCamposProjetos/design2024/blob/main/slides/11_css/exemplos2/ex04.html)
 ---
 
 # position: relative e position: absolute
 
 - Caso seja necessário alterar o **containing block** para um elemento com `position: absolute`, podemos relacioná-lo com o `position: relative`.
 
-- O próximo exemplo explora a relação entre uma div ( `position: relative` ) com dois elementos filhos (`position: absolute`)
+- O próximo exemplo explora a relação entre uma `div` ( `position: relative` ) com dois elementos filhos (`position: absolute`)
+
+- Veja o código-fonte [aqui](https://github.com/RomeritoCamposProjetos/design2024/blob/main/slides/11_css/exemplos2/ex05.html)
 
 ---
 
@@ -429,6 +432,7 @@ Prof. Romerito Campos
 
 <style scoped>
     pre {
+        margin-top: 0;
         float: left;
         margin-left: 20px;
         width: 48%;
@@ -455,7 +459,7 @@ Prof. Romerito Campos
 
 - Observe que aplicamos as propriedades para determinar o posicionamento absoluto para as caixas coloridas. 
 
-- A posição top:0 para a caixa vermelha considera a div. Neste caso, não considera a página (body) como sendo seu **containing block**.
+- A posição `top:0` para a caixa vermelha considera a `div`. Neste caso, não considera a página (`body`) como sendo seu **containing block**.
 
 - Ou seja a referência para o absolute é o elemento pai da caixa.
 
@@ -476,7 +480,7 @@ Prof. Romerito Campos
 
 # position: fixed
 
-- O positionamento fixado é semelhante ao posicionamento absoluto em alguns aspectos:
+- O posicionamento fixado é semelhante ao absoluto em alguns aspectos:
   - O elemento é retirado do fluxo normal;
   - Seu espaço original é ocupado;
 
@@ -501,14 +505,14 @@ Prof. Romerito Campos
 </style>
 
 
-- Além disso, o **containing block** considerado para os elementos com `position: absolute` é o `viewport` (a tela inteira).
+- Além das diferenças anteriores, o **containing block** para os elementos com `position: absolute` é o `viewport` (a tela inteira).
 
 - Vejamos o exemplo a seguir:
 
 ![w:450](./exemplos2/img06.png)
 
 - O elemento de cor verde está fixado
-- A div com borda tracejada possui conteúdo maior que sua área (**overflow**)
+- A `div` com borda tracejada possui conteúdo maior que sua área (**overflow**)
 - Logo, podemos controlar esse overflow com rolagem
 - A medida que a houver rolagem de página, o elemento verde permanece fixado.
 
@@ -559,3 +563,126 @@ Prof. Romerito Campos
 
 ---
 
+<style scoped>
+    section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+</style>
+
+# position: sticky
+
+---
+
+# position: sticky
+
+- Este é o posicionamento que geralmente causa bastante dúvida.
+
+- O posisionamento adesivo funciona como um posicionamento relativo e muda para fixo com base nas propriedades `top`, `left`, `right`, `bottom`.
+
+- Para entender o posicionamento sticky, precisamos compreender que temos:
+  - um **sticky item** (item que será o adesivo)
+  - um **sticky container** (item que é a referência para o adesivo)
+
+---
+
+# position: sticky
+
+<style scoped>
+    img {      
+        margin-left: 20%;        
+        border: 1px solid black;
+        border-radius: 5px
+    }
+</style>
+
+- Considere o exemplo [ex07.html](https://github.com/RomeritoCamposProjetos/design2024/tree/main/slides/11_css/exemplos2). Ele produz o seguinte resultado:
+  
+![w:600](./exemplos2/img07.png)
+
+---
+
+# position: sticky
+
+<style scoped>
+    pre {
+        float: left;
+        width: 48%;
+        margin-top:0;
+    }
+
+    pre:last-of-type {
+        margin-left: 20px
+    }
+
+    ul {
+        clear: both;
+    }
+
+</style>
+
+- A segunda caixa colorida está com `position: sticky` e vai se comportar como adesivo quando:
+  - A página possuir barra de rolagem;
+  - O container sticky atingir `top: 20px;`.
+
+```css
+.box {
+    width: 100px;
+    height: 100px;
+    border: 2px solid blue;
+    background-color: blueviolet;
+    display: inline-block;            
+}
+```
+
+```css
+.sticky {
+    position: sticky;
+    top: 20px
+}
+```
+
+---
+
+<style scoped>
+    img {      
+        margin: 0 5%;        
+        border: 1px solid black;
+        border-radius: 5px
+    }
+</style>
+
+- A imagem abaixo mostra quando o container sticky (body neste exemplo) atingiu `top: 20px`
+
+![alt](./exemplos2/img08.png)
+
+---
+
+- Na imagem anterior, observe que a segunda caixa colorida começa a se deslocar. Isso signfica que ao rolar a página, a posição `top:20px` foi atingida. Ou seja, a borda superior da página está na posição `top: 20px`
+
+- A partir daí, o elemento que se deslocou ficará como um adesivo a uma distância de 20px da borda superior.
+
+- Veja a imagem no próximo slide.
+
+
+---
+
+<style scoped>
+    img {      
+        margin: 0 5%;        
+        border: 1px solid black;
+        border-radius: 5px
+    }
+</style>
+
+![alts](exemplos2/img09.png)
+
+- Veja [aqui](https://github.com/RomeritoCamposProjetos/design2024/tree/main/slides/11_css/exemplos2/sticky.mp4) um vídeo ilustrando este comportamento;
+
+---
+
+# Referências
+
+- [Explicação - Sticky](https://elad.medium.com/css-position-sticky-how-it-really-works-54cd01dc2d46)
