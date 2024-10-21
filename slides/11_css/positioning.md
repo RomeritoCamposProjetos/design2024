@@ -268,9 +268,20 @@ Prof. Romerito Campos
 
 ---
 
+<style scoped>
+    section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+</style>
+
 # position: absolute
 
 ---
+
+
 
 # position: absolute
 
@@ -450,4 +461,101 @@ Prof. Romerito Campos
 
 ---
 
+<style scoped>
+    section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+</style>
+
+# position: fixed
+
+---
+
+# position: fixed
+
+- O positionamento fixado é semelhante ao posicionamento absoluto em alguns aspectos:
+  - O elemento é retirado do fluxo normal;
+  - Seu espaço original é ocupado;
+
+- A diferença crucial é a seguinte: dada uma página que apresenta rolagem na horizontal, o elemento fixado ficará sempre no mesmo local independentemente da movimentação da página.
+
+---
+
+# position: fixed
+
+<style scoped>
+    img {
+        float: left;
+        margin-right: 50px;
+        border-radius: 5px;
+        border: 1px solid black;
+    }
+
+    ul:last-of-type {             
+        font-size: 24px;
+    }
+    
+</style>
+
+
+- Além disso, o **containing block** considerado para os elementos com `position: absolute` é o `viewport` (a tela inteira).
+
+- Vejamos o exemplo a seguir:
+
+![w:450](./exemplos2/img06.png)
+
+- O elemento de cor verde está fixado
+- A div com borda tracejada possui conteúdo maior que sua área (**overflow**)
+- Logo, podemos controlar esse overflow com rolagem
+- A medida que a houver rolagem de página, o elemento verde permanece fixado.
+
+---
+
+<style scoped>
+
+    pre {
+        float: left;
+        width: 48%;
+        margin-top:0;
+    }
+
+    pre:last-of-type {
+        margin-left: 20px
+    }
+
+    ul {
+        clear: both;
+    }
+
+</style>
+
+- O código necessário para este exemplo ilustra a ideia do **containing block**:
+
+```css
+.container {            
+    height: 200px;
+    width: 400px;
+    margin: 0 auto;
+    border: 1px dashed black;
+    overflow-y: scroll;
+}
+```
+```css
+.fixed {
+    position: fixed;
+    top: 50px;
+    right: calc(50% + 100px);
+    height: 50px;
+    width: 100px;
+    border: 2px dotted green;
+    background-color: greenyellow;
+}
+```
+
+- Veja o código [ex06.html](https://github.com/RomeritoCamposProjetos/design2024/tree/main/slides/11_css/exemplos2) e o vídeo do exemplo [aqui](https://github.com/RomeritoCamposProjetos/design2024/tree/main/slides/11_css/exemplos2/video.mp4)
+
+---
 
