@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+
+    <style>
+        div {
+            border: 1px solid black;
+        }
+        .row {
+            display: flex;
+        }
+        .column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        div div {
+            padding: 20px;
+        }
+
+        div[class]:last-of-type {
+            margin-top: 20px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="row">
+        <div>Texto 1</div>
+        <div>Texto 2</div>
+        <div>Texto 3</div>
+    </div>
+
+    <div class="column">
+        <div>Texto 1</div>
+        <div>Texto 2</div>
+        <div>Texto 3</div>
+    </div>
+    
+</body>
+</html>

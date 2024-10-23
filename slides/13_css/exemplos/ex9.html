@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        div {
+            border: 1px solid black;
+        }
+        div[class] {
+            height: 100px;
+        }
+        .flex {
+            display: flex;
+        }
+
+        .start {
+            align-items: start;
+            background-color: aliceblue;
+        }
+
+        .end {
+            align-items: end;
+            background-color: bisque;
+        }
+
+        .center {
+            align-items: center;
+            background-color:darkgray;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="flex start">
+        <div>flex</div>
+        <div>flex</div>
+        <div>flex</div>
+    </div>
+    <div class="flex end">
+        <div>flex</div>
+        <div>flex</div>
+        <div>flex</div>
+    </div>
+    <div class="flex center">
+        <div>flex</div>
+        <div>flex</div>
+        <div>flex</div>
+    </div>
+    
+</body>
+</html>
