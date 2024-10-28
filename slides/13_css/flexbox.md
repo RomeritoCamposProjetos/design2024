@@ -514,7 +514,103 @@ Fonte: [https://triangulo.dev/posts/guia-completo-flexbox/](https://triangulo.de
 
 ## Container Flex - Baseline
 
+- Há também o alinhamento baseado em linha. 
 
+- O [exemplo 10]() mostra como ele ajuste os elementos com base na linha de texto.
+
+- A propriedade `text-align: baseline` é aplicada para obter o alinhamento baseado em linhas.
+
+- Veja a imagem a seguir.
+
+---
+
+<style scoped>
+    img {
+        border: 1px solid black;
+        border-radius: 10px;
+        margin: 0 15%;
+        float: right;
+    }
+</style>
+
+![w:800](./img/img10.png)
+
+---
+
+- O alinhamento baesado em linha, considera uma linha conforme foi desenhada no exemplo.
+
+- Os elementos são alinhados com base nesta linha. 
+
+- Há outras opções de alinhamento baseado em linha. Abaixo segue:
+
+```css
+align-items: baseline;
+align-items: first baseline;
+align-items: last baseline; /* Overflow alinhamento (apenas para alinhamento de posição) */
+align-items: safe center;
+align-items: unsafe center;
+```
+- Baixe o código do exemplo e teste estes valores.
+
+---
+
+## Container Flex - align-content
+
+<style scoped>
+    img {
+        border: 1px solid black;
+        border-radius: 10px;
+        margin: 0 15%;
+        float: right;
+    }
+</style>
+
+- A propriedade align-content atual também no eixo transversal (**cross**).
+
+- Esta propriedade considera um cenário com múltiplas linhas.
+
+![w:800](./img/img11.png)
+
+- Ela pode ser aplicada a um cenário como o desta imagem onde o container tem mais de uma linha.
+
+---
+
+## Container Flex - align-content
+
+<style scoped>
+    ul, li {
+        margin: 0
+    }
+</style>
+
+
+
+- É importante não confudir `align-content` com `align-items`.
+
+- A propriedade `align-content` suporta os seguintes valores:
+    - `start` | `flex-start`
+    - `end` | `flex-end`
+    - `center` 
+    - `baseline`
+    - `space-between`
+    - `space-around`
+    - `space-evenly`
+---
+
+<style scoped>
+    img {
+        border: 1px solid black;
+        border-radius: 10px;
+        margin: 0 15%;
+        float: right;
+    }
+</style>
+
+- O [exemplo 11]() mostra os elementos sem `align-content` definido.
+
+![w:800](./img/img12.png)
+
+---
 
 ---
 # Referências
