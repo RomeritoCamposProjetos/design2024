@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox - Baseline</title>
+
+    <style>
+        div[class] {
+            border: 1px solid black;
+        }
+        .flex {
+            display: flex;
+            height: 100px;
+            align-items: baseline;
+        }
+
+        .tiny {
+            font-size: 20px;
+        }
+
+        .normal {
+            font-size: 30px;
+        }
+
+        .medium {
+            font-size: 60px;
+        }
+
+        div::first-line {
+            text-decoration-line: underline;
+            text-decoration-color: blue;
+            text-decoration: double;
+        }
+
+        div.absolute {
+            position: absolute;
+            border: 2px dotted red;
+            width: 400px;
+            top: 66px;
+        }
+        div#text {
+            position: absolute;
+            top: 50px;
+            left:360px
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="flex">
+        <div class="tiny">texto 1</div>
+        <div class="normal">texto 2</div>
+        <div class="medium">texto 3</div>
+    </div>
+
+    <div class="absolute">
+    </div>
+    <div id="text">
+        baseline
+    </div>
+
+
+    
+</body>
+</html>

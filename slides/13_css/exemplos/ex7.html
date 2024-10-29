@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+
+    <style>
+        div {
+            border: 1px solid black;
+        }
+        div[class] {
+            height: 100px;
+        }
+        .flex {
+            display: flex;
+        }
+        .end {
+            justify-content: flex-end;
+        }
+        .space-between {
+            justify-content: space-between;
+        }
+        .space-around {
+            justify-content: space-around;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="flex end">
+        <div>flex</div>
+        <div>flex</div>
+        <div>flex</div>
+    </div>
+    <div class="flex space-between">
+        <div>flex</div>
+        <div>flex</div>
+        <div>flex</div>
+    </div>
+    <div class="flex space-around">
+        <div>flex</div>
+        <div>flex</div>
+        <div>flex</div>
+    </div>
+    
+</body>
+</html>

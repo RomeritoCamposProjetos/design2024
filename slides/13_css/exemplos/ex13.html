@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+
+    <style>
+        div.row {
+            display: flex;
+            border: 2px solid blue;
+            gap: 5px;
+            width: 400px;
+            height: 80px;
+            margin-top: 5px;
+        }
+        .row > div {
+            border: 1px solid black;
+            width: 70px;
+            flex-shrink: 0;
+        }
+
+        div.shrink {
+            flex-shrink: 1;
+        }
+    </style>
+
+</head>
+<body>
+    <h2>flex-shrink: 0</h2>
+    <div class="row">
+        <div>Texto 1</div>
+        <div>Texto 2</div>
+        <div>Texto 3</div>
+        <div>Texto 4</div>
+        <div>Texto 5</div>
+        <div>Texto 6</div>
+        <div>Texto 7</div>
+        <div>Texto 8</div>
+    </div>
+
+    <h2>flex-shrink: 1</h2>
+    <div class="row">
+        <div class="shrink">Texto 1</div>
+        <div class="shrink">Texto 2</div>
+        <div class="shrink">Texto 3</div>
+        <div class="shrink">Texto 4</div>
+        <div class="shrink">Texto 5</div>
+        <div class="shrink">Texto 6</div>
+        <div>Texto 7</div>
+        <div class="shrink">Texto 8</div>
+    </div>
+</body>
+</html>

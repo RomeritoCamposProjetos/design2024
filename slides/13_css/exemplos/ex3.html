@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+
+    <style>
+        div {
+            border: 1px solid black;
+        }
+        .row-reverse {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        .column-reverse {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        div div {
+            padding: 20px;
+        }
+
+        div[class]:last-of-type {
+            margin-top: 20px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="row-reverse">
+        <div>Texto 1</div>
+        <div>Texto 2</div>
+        <div>Texto 3</div>
+    </div>
+
+    <div class="column-reverse">
+        <div>Texto 1</div>
+        <div>Texto 2</div>
+        <div>Texto 3</div>
+    </div>
+    
+</body>
+</html>
