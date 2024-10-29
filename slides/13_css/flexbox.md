@@ -49,13 +49,13 @@ Prof. Romerito Campos
 
 ## Flexbox
 
-- Flexbox é uma maneira simples de distribuir os espaços da página, alinhar conteúdo e manitpular a ordenação visual dos elementos.
+- Flexbox é uma maneira simples de distribuir os espaços da página, alinhar conteúdo e manipular a ordenação visual dos elementos.
 
 - Pode-se alinhar horizontal e verticalmente os elementos sem preocupação com a ordem deles no HTML.
 
 - É possível prever como os elementos vão se comportar para diferentes dispositivos e tamanhos diferentes de display.
 
-- Os compontntes flex são de dois tipos: **container** ou **item**.
+- Os componentes flex são de dois tipos: **container** ou **item**.
 
 ---
 
@@ -612,7 +612,153 @@ align-items: unsafe center;
 
 ---
 
+# Itens Flex
+
 ---
+
+## Itens Flex
+
+- O segundo elemento fundamental do Flexbox é o **item flex**
+
+- Qualquer elemento dentro de um container flex é um item flex.
+
+- A relação entre container e item flex é a relação pai-filho presente na estrutura do HTML. Os demais descendentes de um container flex não são considerados itens em relação ao container.
+
+- Há propriedades para otimizar o uso do espaço do container e também existem propriedades para alterar o comportamento padrão dos itens flex.
+
+---
+
+## Itens Flex
+
+- As três principais propriedades dos itens flex são:
+    - `flex-grow`: indica o crescimento dos itens
+    - `flex-shrink`: indica o encolhimento dos itens
+    - `flex-basis`: porção inicial do eixo principal a ser ocupada.
+
+- As propriedades `flex-grow` e `flex-shrink` adotam um **fator de crescimento**.
+
+- A propriedade `flex-basis` assume diferentes valores como 200px, 0, auto, 0% entre outros.
+
+---
+
+## Itens Flex: flex-grow
+
+<style scoped>
+    ul, li {
+        margin: 0;
+    }
+    img {
+        border: 1px solid black;
+        border-radius: 10px;
+        margin: 0 20%;
+        float: right;
+    }
+</style>
+
+- O [exemplo 12]() contém referente a figura abaixo: 
+
+![w:680](./img/img13.png)
+
+---
+
+- Na imagem anterior, temos 3 containers flex. Cada um com seus itens possuindo diferentes configurações para a propriedade `flex-grow`
+- O primeiro caso, flex-grow: 0. Logo, os itens não ocupam o espaço livre.
+- No segundo e terceiro casos, os itens indica o `flex-grow` utilizado.
+- Observe a diferença de distribuição entre os itens nos diferentes containers. Isso se deve ao fator de crescimento utilizado.
+- Por coincidência, no container 2 há dois itens com flex-grow diferentes, mas ocupado o mesmo espaço. **Quando analisamor o cálculo do fator entenderemos melhor.**
+
+---
+
+## Itens flex: flex-shrink
+
+- Também há um fator de encolhimento dos itens: o valor padrão é `flex-shrink: 1`. Sempre encolher.
+- Trata-se da propriedade `flex-shrink`. Ela permite o quando cada item flex vai enconlher diante de situações onde os itens não cabem no container.
+- Vejamos o [Exemplo 13]() com um container de 400px de largura (eixo principal) e 7 itens com 80px de largura cada um.
+- Se você fez as contas já sabe o que acontece. Vejamos o próximo slide.
+
+---
+
+<style scoped>
+    ul, li {
+        margin: 0;
+    }
+    img {
+        border: 1px solid black;
+        border-radius: 10px;
+        margin: 0 15%;
+        float: right;
+    }
+</style>
+
+- Resultado do [Exemplo 13]()
+
+![w:800](./img/img15.png)
+
+
+---
+
+- No slide anterio, observe que o primeiro container os itens tem a propriedade `flex-shrink: 0` e `width: 70px`. Logo, tem overflow e os itens ficam fora do container.
+
+- No segundo container, os itens de 1 até 6 e o item 8 tem a propridade `flex-shrink: 1`. Eles encolhem e todos os itens cabem no container. 
+
+- O item 7 do segundo container não tem `flex-shrink: 1`, logo força a largura indicada de 70px.
+
+- A conclusão deste exemplo é que o flex oferece a capacidade de indicar se o item vai encolher (padrão) ou não.
+
+---
+
+## Itens flex - flex-basis
+
+- A definição da propriedade indica que ela define um espaço inicial que o elemento ocupará no eixo principal (main).
+
+- Esta propriedade possui diferentes condiconantes para seu comportamento a depender do valor atribuido e fatores envolvendo outras propriedades.
+
+- Neste ponto, veremos apenas o comportamento básico que é definido um valor em pixel para o elemento.
+
+---
+
+<style scoped>
+    ul, li {
+        margin: 0;
+    }
+    img {
+        border: 1px solid black;
+        border-radius: 10px;
+        margin: 0 15%;
+        float: right;
+    }
+</style>
+
+- O [Exemplo 14]() mostra alguns possibilidades para `flex-basis`
+
+![w:800](./img/img16.png)
+
+---
+
+- O item com Texto 1 está com flex-basis configurado para 0: `flex-basis: 0`. Neste caso, ele vai ocupar o espaço mínimo no eixo principal.
+
+- O item com Texto 2 está com flex definido para o valor padrão: `flex-basis: auto`.
+
+- O item com Texto 3 está com flex-basis definido para 100px: `flex-basis: 100px`.
+    - Neste último caso, temos que o item vai tentar utilizar o espaço do container para ter pelo menos os 100px definidos. Ele pode crescer se `flex-grow: 1`.
+
+---
+
+## Propriedade flex
+
+- Até aqui 3 propriedades básicas para alteração de um item flex foram apresentas: `flex-grow`, `flex-shrink` e `flex-basis`.
+
+- De acordo com os autores da especificação, o ideal é evitar o uso delas individualmente.
+
+- Para isso, há a propriedade `flex` que pode ser usada para indicar os valores de `flex-grow`, `flex-shrink` e `flex-basis` simultaneamente.
+
+- Exemplo: `flex: 1 1 200px`, indica `flex-grow: 1`, `flex-shrink: 1` e `flex-basis: 200px`.
+
+
+---
+
 # Referências
 
 https://triangulo.dev/posts/guia-completo-flexbox/
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox
