@@ -26,6 +26,24 @@ body, html{
     margin: 15%;
     flex: 1 0;
     align-self: baseline;
+    position: relative;
+}
+
+.tools {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    bottom: 60px;
+    margin: 0 20px;
+    width: calc(100% - 40px);
+    padding: 5px 10px;
+    font-size: 16px;
+    box-shadow: 4px 4px 36px -12px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 4px 4px 36px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 4px 36px -10px rgba(0,0,0,0.75);
+    z-index: 1;
+    background-color: white;
 }
 
 /* tornar todos os span de icons do material design com 16px */
@@ -86,6 +104,9 @@ body, html{
     width: 100%;
     resize: none;
     border: none;
+    outline: none;
+    z-index: 0;
+    position: relative;
 }
 
 .footer {
@@ -154,13 +175,13 @@ body, html{
     justify-content: center;
 }
 
-.close > a {
+.close > a, .tools > a {
     text-decoration: none;
     padding: 5px 10px;
     font-size: 10px;
 }
 
-.close > a:hover {
+.close > a:hover, .tools > a:hover{
     background-color: rgba(220, 220, 220, 0.5);
     border-radius: 5px;
 }
