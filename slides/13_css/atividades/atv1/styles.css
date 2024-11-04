@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body, html{
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    /* flex-flow: column nowrap; */
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.mail {
+    display: flex;
+    flex-flow: column nowrap;
+    border: 1px solid grey;
+    height: 600px;
+    width: 600px;
+    margin: 15%;
+    flex: 1 0;
+    align-self: baseline;
+    position: relative;
+}
+
+.tools {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    bottom: 60px;
+    margin: 0 20px;
+    width: calc(100% - 40px);
+    padding: 5px 10px;
+    font-size: 16px;
+    box-shadow: 4px 4px 36px -12px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 4px 4px 36px -10px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 4px 36px -10px rgba(0,0,0,0.75);
+    z-index: 1;
+    background-color: white;
+}
+
+/* tornar todos os span de icons do material design com 16px */
+.mail span {
+    font-size: 16px;
+}
+
+.mail .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: gainsboro;
+    height: 40px;
+    width: 100%;
+    padding: 0px 20px;
+}
+
+.mail .header .title {
+    
+}
+
+.mail .header .buttons > a {
+    text-decoration: none;
+}
+
+.mail .header .buttons > a:hover {
+    background-color: gray;
+}
+
+.mail .body {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 5px 0;
+    height: 100%;
+}
+
+.recipient, .subject, .message {
+    display: flex;
+    padding: 5px 20px;
+}
+
+.recipient > input, .subject > input {
+    flex: 1;
+    padding: 3px 0;
+    border: 0;
+    outline: none;
+    border-bottom: 1px solid grey;
+    color: grey;
+    font-size: 16px;
+}
+
+.message {
+    display: flex;
+    flex: 1 0;
+}
+
+.message > textarea {
+    width: 100%;
+    resize: none;
+    border: none;
+    outline: none;
+    z-index: 0;
+    position: relative;
+}
+
+.footer {
+    display: flex;
+    padding: 10px 20px;
+}
+
+.send {
+    display: flex;
+}
+
+.send > .btn {
+    flex: 1 0 70px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    text-align: right;
+    border: none
+}
+
+.send > .opt {
+    flex: 1 0;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    text-align: center;
+    border: none;
+}
+
+.send > button:last-of-type {
+    border-left: 2px solid black;
+}
+
+.opt, .btn {
+    background-color: rgb(67, 67, 239);
+    color: white;
+    font-size: 18px;
+    padding: 8px 16px;
+}
+
+.option {
+    display: flex;
+    flex: 1;
+    gap: 3px;
+    align-items: center;
+    padding: 0 6px;
+    font-size: 18px;
+}
+
+.option > a{
+    padding: 5px 10px;
+    text-decoration: none;
+}
+
+.option > a:first-of-type {
+    background-color: gainsboro;
+    border-radius: 5px;
+}
+
+.option > a:hover {
+    background-color: rgba(220, 220, 220, 0.5);
+    border-radius: 5px;
+}
+
+.close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close > a, .tools > a {
+    text-decoration: none;
+    padding: 5px 10px;
+    font-size: 10px;
+}
+
+.close > a:hover, .tools > a:hover{
+    background-color: rgba(220, 220, 220, 0.5);
+    border-radius: 5px;
+}

@@ -6,3 +6,4 @@ Nesta página, você tem acesso aos slides da disciplina.
 
 - [position](../slides/11_css/positioning.pdf)
 - [flexbox](../slides/13_css/flexbox.pdf)
+    - [Atividades](https://github.com/RomeritoCamposProjetos/design2024/tree/main/slides/13_css/atividades)
