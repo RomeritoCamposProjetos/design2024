@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body, html {
+    height: 100vh;    
+}
+
+.container {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 350px;
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 15px;
+}
+
+.news {
+    padding: 20px 0;
+}
+
+.header {
+    border-bottom: 1px solid rgb(219, 219, 219);;
+    font-weight: bolder;
+    font-size: large;
+    color: rgb(52, 52, 52);
+    padding: 20px 20px;
+}
+
+.news {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.news {
+    border-bottom: 1px solid rgb(219, 219, 219);
+    margin: 0 20px;
+}
+
+.news:last-of-type {
+    border: 0;
+}
+
+.text {
+    flex: 1;
+    color: rgb(177, 0, 0);
+    font-weight: bolder;
+    font-size: large;
+}
+
+.text:hover {    
+    color: rgb(131, 0, 0);
+    cursor: pointer;
+}
+
+.order {
+    font-size:x-large;
+    color: rgb(181, 181, 181);;
+}
+
