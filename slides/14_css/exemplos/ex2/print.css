@@ -1,0 +1,10 @@
+
+/* Força a cor do texto no modo impressão ser ajustada para vermelho */
+h1 {
+    background-color: green;
+    print-color-adjust: exact;
+    color: red;
+    font-size: 100px;
+}    
+
+
