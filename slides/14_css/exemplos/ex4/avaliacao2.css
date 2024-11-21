@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body, html{
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
+    padding: 40px;
+    height: 100%;
+}
+
+.main {
+    display: flex;
+    height: 100%;
+    gap: 10px;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 150px;
+    height: 100%;
+    background-color: rgb(189, 252, 252);
+}
+
+.sidebar > a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    width: 100px;
+    text-align: center;
+    border-radius: 25px;
+    background-color: rgb(108, 145, 204);
+
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    padding: 10px;
+    background-color: rgb(164, 164, 164);
+    gap: 10px;
+    overflow-y: scroll;
+}
+
+.card {
+    flex: 1 0 350px;
+    height: 300px;
+    padding: 0 10px;
+    background-color: bisque;
+    border-radius: 10px;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    border-bottom: 1px solid black;
+}
+
+.card > p {
+    padding: 10px;
+}
+
+
+@media screen and (max-width: 767px) {
+
+    .container {
+        padding: 20px;
+    }
+
+    .content {
+        flex-flow: column nowrap;
+    }
+
+
+    .main {
+        position: relative;
+    }
+
+    .sidebar {
+        position: absolute;
+        flex-flow: row;
+        width: 100%;
+        height: 85px;
+        gap: 5px;
+        bottom: 0;
+        font-size: 14px;
+    }
+    
+    .sidebar > a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: black;
+        padding: 10px 15px;
+        width: 70px;
+        height: 50px;        
+        border-radius: 25px;
+        background-color: rgb(108, 145, 204);
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    
+    .container {
+        padding: 20px;
+    }
+
+    .content {
+        flex-flow: column nowrap;
+    }
+
+
+    .main {
+        position: relative;
+    }
+
+    .sidebar {
+        position: absolute;
+        flex-flow: row;
+        width: 100%;
+        height: 85px;
+        gap: 5px;
+        bottom: 0;        
+    }
+
+    .sidebar > a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: black;        
+        width: 100px;        
+        border-radius: 25px;
+        background-color: rgb(108, 145, 204);
+    }
+ 
+    
+    
+
+}
