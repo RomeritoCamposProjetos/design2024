@@ -73,7 +73,7 @@ body, html{
     padding: 10px;
 }
 
-.open-sidebar {
+.button {
     display: none;
 }
 
@@ -129,15 +129,27 @@ body, html{
 @media screen and (orientation: landscape) and (max-height: 430px) {
     .sidebar {
         display: none;
+        
     }
 
-    .open-sidebar {
+    .button {
         display: block;
         position: absolute;
         height: 50px;
         width: 50px;
         top: 50%;
         left: -45px;
+    }
+
+
+    .button:checked ~ .sidebar {
+        display: flex;
+        position: absolute;
+        left: -40px;
+        top: -40px;
+        flex-flow: column nowrap;
+        width: 120px;
+        height: 100vh;
     }
 }
 
