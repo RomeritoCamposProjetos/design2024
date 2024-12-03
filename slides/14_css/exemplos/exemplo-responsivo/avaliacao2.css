@@ -73,7 +73,7 @@ body, html{
     padding: 10px;
 }
 
-.button {
+.button, .hamburger {
     display: none;
 }
 
@@ -117,7 +117,7 @@ body, html{
         align-items: center;
         text-decoration: none;
         color: black;
-        padding: 10px 15px;
+        padding: 4px 8px;
         width: 70px;
         height: 50px;        
         border-radius: 25px;
@@ -128,8 +128,14 @@ body, html{
 
 @media screen and (orientation: landscape) and (max-height: 430px) {
     .sidebar {
-        display: none;
-        
+        display: flex;
+        position: absolute;
+        left: -140px;
+        top: -40px;
+        flex-flow: column nowrap;
+        width: 120px;
+        height: calc(100vh + 20px);
+
     }
 
     .button {
@@ -137,19 +143,54 @@ body, html{
         position: absolute;
         height: 50px;
         width: 50px;
-        top: 50%;
-        left: -45px;
+        top: -20px;
+        left: -20px;
+        z-index: 2;
+        opacity: 0;
     }
 
+    .hamburger {
+        display: flex;
+        flex-flow: column nowrap;
+        z-index: 1;
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        background-color: rgb(108, 145, 204);
+        padding: 10px;
+        border-radius: 5px;
+        opacity: 50%;
+    }
+
+    .hamburger > span {
+        width: 20px;
+        height: 4px;
+        background-color: black;
+        border-radius: 3px;
+        margin: 2px;
+        z-index: 1;
+    }
+
+    .button:checked ~ .hamburger{
+        background-color: transparent;
+        padding: 10px;
+        border-radius: none;
+    }
+
+    .button:checked ~ .hamburger > span:first-child {
+        transform: rotate(45deg) translate(8px, 3px);
+    }
+
+    .button:checked ~ .hamburger > span:nth-child(2) {
+        transform: rotate(-45deg) translate(3px, 3px);
+    }
+
+    .button:checked ~ .hamburger > span:last-child {
+        display: none;
+    }
 
     .button:checked ~ .sidebar {
-        display: flex;
-        position: absolute;
-        left: -40px;
-        top: -40px;
-        flex-flow: column nowrap;
-        width: 120px;
-        height: 100vh;
+        left: -20px;
     }
 }
 

@@ -1,0 +1,27 @@
+
+body {
+    height: 100vh;
+}
+
+.container {
+    height: 100%;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contiainer > h1 {
+    color: white;
+}
+
+
+@media screen and (orientation: landscape) {
+    .container {
+        background-color: white;
+    }
+
+    .container > h1 {
+        color: blue;
+    }   
+}

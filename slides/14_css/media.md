@@ -230,7 +230,130 @@ Prof. Romerito Campos
 
 - O uso de largura e altura é bem comum, principalmente, no que diz respeito a sites responsivos (quem tem a capacidade de adaptação do design a diferentes screens)
 
+- Vejamos exemplos simples do uso de mídia com *media features*
+
+---
+
+## Recursos de Mídia (media feature)
+
+<style scoped>
+    img {
+        float: left;
+        margin-left:20%
+    }
+</style>
+
+- O [exemplo 05](https://github.com/RomeritoCamposProjetos/design2024/tree/main/slides/14_css/exemplos/ex05) mostra uma aplicação que só exibe uma mensagem. 
+
+- Para ver o exemplo de forma clara abra no modo responsivo
+    - No chrome, use o atalho **ctrl + shif + c**
+
+![w:150](./exemplos/ex05/ex05-1.png)
+
+![h:130](./exemplos/ex05/ex05-2.png)
+
+---
+
+- O exemplo anterior tem código CSS bem simples conforme você pode ver abaixo:
+
+```css
+body {
+    height: 100vh;
+}
+.container {
+    height: 100%;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contiainer > h1 {
+    color: white;
+}
+```
+---
+
+- No entanto, para realizar a mudança de cores adotamos o uso de `@media` onde indicamos o tipo de tela para `screen` e aplica-se um *media feature*. Veja o código: 
+
+```css
+@media screen and (orientation: landscape) {
+    .container {
+        background-color: white;
+    }
+
+    .container > h1 {
+        color: blue;
+    }   
+}
+```
+
+- **Recomenda-se executar e usar o modo responsivo**
+
+---
+
+- O exemplo anterior é extramente simples.
+
+- Entretanto, veja que podemos pensar mais adiante e associar os designs de páginas completas com a capacidade de adaptar-se ao tela disponível.
+
+- Essa capacidade é alcançada manipulando os elementos HTML e altearndo o CSS conforme as características do dispositivo.
+
+- O recurso fundamental como vimos é o `@media` que permite criar blocks condicionados a características dos dispositivos.
+
+---
+
+<style scoped>
+    section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+</style>
+
+# Estilo Responsivo
 
 ---
 ## Estilo Responsivo
 
+- O design responsivo visa a criar designs capazes de serem usados numa faixa ampla de dispositivos (móveis, desktop)
+
+- Atualmente, a distinção entre dispositivos móveis e desktops está um tanto nebulosa.
+    - O CSS ainda não possui capacidade de saber se o disposivo está na palma da sua mão enquanto você caminha, por exemplo.
+
+- Uma forma de alcançar o **design responsivo** é justamente observar características do dispositivo como `orientation`, `max-width` e etc.
+
+---
+
+## Estilo responsivo
+
+- No código disponível no github - [neste link](https://github.com/RomeritoCamposProjetos/design2024/tree/main/slides/14_css/exemplos/exemplo-responsivo) - há um exemplo de design responsivo.
+
+- Baixe o código e execute via `Live Server` ou algum servidor de linguanges como python ou php.
+
+- Ao executar, veja a versão inicial para desktop e em seguida use o atalho **Ctrl + Shift + C** e explore os dispositivos disponíveis.
+
+- A seguir algumas imagens do resultado obtido
+
+---
+
+![w:1200](./exemplos/exemplo-responsivo/desktop.png)
+
+---
+
+<style scoped>
+
+    section {
+        display: flex;
+        flex-flow: column wrap;
+    }
+
+    img {
+        float: left;
+    }
+</style>
+
+![h:500](./exemplos/exemplo-responsivo/Mobile-portrait.png)
+
+![w:450](./exemplos/exemplo-responsivo/mobile-landscape.png)
+
+![w:450](./exemplos/exemplo-responsivo/mobile-ladscape2.png)
