@@ -25,10 +25,12 @@ Prof. Romerito Campos
 
 # Plano de Aula
 
-- **Objetivo:** 
+- **Objetivo:** Compreender o uso de @media em designs responsivos
 
 - **Conteúdos**:
-    - 
+    - @media, @import
+    - Tipos de mídia 
+    - Recursos de mídia (*media feature*)
 
 ---
 
@@ -47,7 +49,7 @@ Prof. Romerito Campos
 ---
 ## Regras @ 
 
-- AS regras `@` ou **At-Rules** são regras que podem ser definidas com base em condicionais.
+- As regras `@` ou **At-Rules** são regras que podem ser definidas com base em condicionais.
 
 - Elas são aplicadas quando determinadas características são encontadas pelo browser que está lendo o arquivo css.
 
@@ -58,7 +60,7 @@ Prof. Romerito Campos
 
 - No [exemplo 01](https://github.com/RomeritoCamposProjetos/design2024/tree/main/slides/14_css/exemplos/ex01) temos dois conjuntos de regras para o documento
   - Primeiro, definido na tag `style`;
-  - Segnudo, defindio em arquivo externo `style-print.css` e incluido no documento.
+  - Segundo, definido em arquivo externo.`style-print.css` e incluido no documento.
 
 - Destaque para o tipo de media indicado na inclusão do arquivo css:
 
@@ -77,9 +79,9 @@ Prof. Romerito Campos
 - Os três tipos de mídia mais utilizados são:
   - `all` (padrão)
   - `screen`: monitores, telas em geral.
-  - `ee`: impressão ou visualização de impressão
+  - `print`: impressão ou visualização de impressão
 
-- A indicação do tipo de mídia pode ser feito dentro do próprio arquivo css, vejamos.
+- A indicação do tipo de mídia pode ser feita dentro do próprio arquivo css, vejamos.
 
 ---
 
@@ -109,12 +111,12 @@ Prof. Romerito Campos
     }
 </style>
 
-- No [exemplo 02](https://github.com/RomeritoCamposProjetos/design2024/tree/main/slides/14_css/exemplos/ex02), temos a inclusão via tag `link` de duas folhas estilos para mídia `screen` e `print`.
+- No [exemplo 02](https://github.com/RomeritoCamposProjetos/design2024/tree/main/slides/14_css/exemplos/ex02), temos a inclusão via tag `link` de duas folhas de estilos para mídia `screen` e `print`.
 
 - É possível incluir os dois arquivos de folha de estilos e um único arquivo e depois adicioná-lo ao HTML.
   - O [Exemplo 03](https://github.com/RomeritoCamposProjetos/design2024/tree/main/slides/14_css/exemplos/ex03) faz este tipo de abordagem. Veja abaixo:
 
-- A regra @import permite este tipo de agrupamento de folha de estios. 
+- A regra `@import` permite este tipo de agrupamento de folha de estilos. 
 ```css
 /* arquivo styles.css */
 @import url('./style-print.css') print;
@@ -177,7 +179,7 @@ Prof. Romerito Campos
 
 - Observe a primeira linha do código do slide anteior: `@media print`.
 
-- Indicamos que as regras dentro do bloco `@media` será aplicadas ao tipo de mídia `print`
+- Indicamos que as regras dentro do bloco `@media` serão aplicadas ao tipo de mídia `print`
 
 - Neste exemplo, não utilizamos a regra `@import`, embora o efeito seja o mesmo.
 
@@ -193,14 +195,14 @@ Prof. Romerito Campos
 
 - Desta forma, é possível indicar o tipo de mídia mais (+) algum recurso (***feature***). 
 
-- Veremos um recurso chamado `color`, que indica impressora, ou monitor com cores. 
+- Veremos um recurso chamado `color`, que indica impressora ou monitor com cores. 
 
 
 
 ---
 ## Media Queries Complexas
 
-- O trecho de código abaixo indica o tipo de media (`print`) e o recurso (`color`)
+- O trecho de código abaixo indica o tipo de media (`print`) e o recurso (`color`).
 ```html
 <link href="print-color.css" media="print and (color)" rel="stylesheet">
 ```
@@ -224,11 +226,11 @@ Prof. Romerito Campos
 
 ## Recursos de Mídia (media feature)
 
-- Os media features pode ter um valor dentro de uma faixa.
+- Os media features podem ter um valor dentro de uma faixa.
 - Por exemplo, `width`.
   - Há duas variações que são `min-width` e `max-width`
 
-- O uso de largura e altura é bem comum, principalmente, no que diz respeito a sites responsivos (quem tem a capacidade de adaptação do design a diferentes screens)
+- O uso de largura e altura é bem comum, principalmente no que diz respeito a sites responsivos (quem tem a capacidade de adaptação do design a diferentes screens)
 
 - Vejamos exemplos simples do uso de mídia com *media features*
 
@@ -245,8 +247,8 @@ Prof. Romerito Campos
 
 - O [exemplo 05](https://github.com/RomeritoCamposProjetos/design2024/tree/main/slides/14_css/exemplos/ex05) mostra uma aplicação que só exibe uma mensagem. 
 
-- Para ver o exemplo de forma clara abra no modo responsivo
-    - No chrome, use o atalho **ctrl + shif + c**
+- Para ver o exemplo de forma clara abra o navegador no modo responsivo:
+    - No chrome, use o atalho **ctrl + shif + c**.
 
 ![w:150](./exemplos/ex05/ex05-1.png)
 
@@ -293,11 +295,11 @@ body {
 
 - O exemplo anterior é extramente simples.
 
-- Entretanto, veja que podemos pensar mais adiante e associar os designs de páginas completas com a capacidade de adaptar-se ao tela disponível.
+- Entretanto, veja que podemos pensar mais adiante e associar os designs de páginas completas com a capacidade de adaptar-se a tela disponível.
 
 - Essa capacidade é alcançada manipulando os elementos HTML e altearndo o CSS conforme as características do dispositivo.
 
-- O recurso fundamental como vimos é o `@media` que permite criar blocks condicionados a características dos dispositivos.
+- O recurso fundamental como vimos é o `@media` que permite criar blocos condicionados a características dos dispositivos.
 
 ---
 
@@ -328,7 +330,7 @@ body {
 
 - No código disponível no github - [neste link](https://github.com/RomeritoCamposProjetos/design2024/tree/main/slides/14_css/exemplos/exemplo-responsivo) - há um exemplo de design responsivo.
 
-- Baixe o código e execute via `Live Server` ou algum servidor de linguanges como python ou php.
+- Baixe o código e execute via `Live Server` ou algum servidor de linguangens como python ou php.
 
 - Ao executar, veja a versão inicial para desktop e em seguida use o atalho **Ctrl + Shift + C** e explore os dispositivos disponíveis.
 
