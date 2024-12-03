@@ -1,0 +1,19 @@
+
+/* 
+ Neste exemplo, o link no index.html faz com que as regras abaixo
+ sejam aplicadas somente ao modo 'print'. 
+
+ O atributo 'media' utilizanod na tag link no index.html indica 'print',
+ caso não tenha este valor os estilos vão se sobrepor (não alcança o estilo abaixo).
+*/
+
+p {
+    padding: 0;
+    border: 5px solid black;
+    line-height: 2em;
+    font-size: 18px;
+}
+
+h1 {
+    text-align: right;
+}

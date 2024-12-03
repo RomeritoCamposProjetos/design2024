@@ -1,0 +1,228 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body, html{
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
+    padding: 40px;
+    height: 100%;
+}
+
+.main {
+    display: flex;
+    height: 100%;
+    gap: 10px;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 150px;
+    height: 100%;
+    background-color: rgb(189, 252, 252);
+}
+
+.sidebar > a {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    width: 100px;
+    text-align: center;
+    border-radius: 25px;
+    background-color: rgb(108, 145, 204);
+
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    padding: 10px;
+    background-color: rgb(164, 164, 164);
+    gap: 10px;
+    overflow-y: scroll;
+}
+
+.card {
+    flex: 1 0 350px;
+    height: 300px;
+    padding: 0 10px;
+    background-color: bisque;
+    border-radius: 10px;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    border-bottom: 1px solid black;
+}
+
+.card > p {
+    padding: 10px;
+}
+
+.button, .hamburger {
+    display: none;
+}
+
+/* @media screen and (max-height: 767px) and (orientation: landscape) {
+    .main {        
+        flex-flow: row;
+    }
+    .sidebar {
+        display: flex;
+    }
+} */
+
+@media screen and (max-width: 767px) {
+
+    .container {
+        padding: 20px;
+    }
+
+    .content {
+        flex-flow: column nowrap;
+    }
+
+
+    .main {
+        position: relative;
+    }
+
+    .sidebar {
+        position: absolute;
+        flex-flow: row;
+        width: 100%;
+        height: 85px;
+        gap: 5px;
+        bottom: 0;
+        font-size: 14px;
+    }
+    
+    .sidebar > a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: black;
+        padding: 4px 8px;
+        width: 70px;
+        height: 50px;        
+        border-radius: 25px;
+        background-color: rgb(108, 145, 204);
+    }
+
+}
+
+@media screen and (orientation: landscape) and (max-height: 430px) {
+    .sidebar {
+        display: flex;
+        position: absolute;
+        left: -140px;
+        top: -40px;
+        flex-flow: column nowrap;
+        width: 120px;
+        height: calc(100vh + 20px);
+
+    }
+
+    .button {
+        display: block;
+        position: absolute;
+        height: 50px;
+        width: 50px;
+        top: -20px;
+        left: -20px;
+        z-index: 2;
+        opacity: 0;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-flow: column nowrap;
+        z-index: 1;
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        background-color: rgb(108, 145, 204);
+        padding: 10px;
+        border-radius: 5px;
+        opacity: 50%;
+    }
+
+    .hamburger > span {
+        width: 20px;
+        height: 4px;
+        background-color: black;
+        border-radius: 3px;
+        margin: 2px;
+        z-index: 1;
+    }
+
+    .button:checked ~ .hamburger{
+        background-color: transparent;
+        padding: 10px;
+        border-radius: none;
+    }
+
+    .button:checked ~ .hamburger > span:first-child {
+        transform: rotate(45deg) translate(8px, 3px);
+    }
+
+    .button:checked ~ .hamburger > span:nth-child(2) {
+        transform: rotate(-45deg) translate(3px, 3px);
+    }
+
+    .button:checked ~ .hamburger > span:last-child {
+        display: none;
+    }
+
+    .button:checked ~ .sidebar {
+        left: -20px;
+    }
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1023px){   
+    
+    .content {
+        flex-flow: column nowrap;
+    }
+
+    .main {
+        position: relative;
+    }
+
+    .sidebar {
+        position: absolute;
+        flex-flow: row;
+        width: 100%;
+        height: 85px;
+        gap: 5px;
+        bottom: 0;        
+    }
+
+    .sidebar > a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: black;        
+        width: 100px;        
+        border-radius: 25px;
+        background-color: rgb(108, 145, 204);
+    }
+ 
+}

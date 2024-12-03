@@ -1,0 +1,14 @@
+
+.navbar {
+    display: none;
+}
+
+.card {
+    width: 100%;
+    border: 1px solid black;
+    margin: 10px 0px;
+}
+
+.card > p {
+    text-align: justify;
+}
