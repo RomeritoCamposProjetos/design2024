@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu com Flexbox</title>
+    
+    <style>
+        /* Estilo geral da barra de navegação */
+        .navbar {
+            background-color: #003366;
+            padding: 10px;
+        }
+
+        .navbar ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+        }
+
+        .navbar a:hover {
+            color: lightgray;
+        }
+
+        /* Botão "Menu" */
+        .menu-btn {
+            display: none;
+            background-color: #003366;
+            color: white;
+            border: none;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        #menu-toggle {
+            display: none;
+        }
+
+        /* Ajustes para telas pequenas */
+        @media (max-width: 600px) {
+            .menu-btn {
+                display: block;
+            }
+
+            .navbar ul {
+                display: none;
+                flex-direction: column;
+                align-items: flex-start;
+                background-color: #003366;
+                padding: 10px;
+            }
+
+            #menu-toggle:checked + .menu-btn + ul {
+                display: flex;
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-btn">Menu</label>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Bem-vindo ao Meu Site</h1>
+        <p>Explore as seções acima para saber mais!</p>
+    </main>
+    <footer>
+        <p>&copy; 2024 Meu Site. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Login</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+
+        /* Estilo geral do layout */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .login-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .login-form {
+            width: 40%;
+            background-color: white;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .login-form h2 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        .btn:hover {
+            background-color: #2980b9;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        p a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .logo {
+            display: block;
+            width: 40%;
+        }
+
+        .logo img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Responsividade para smartphones */
+        @media (max-width: 768px) {
+            .login-container {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .login-form {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .logo {
+                display: none; /* Esconde a imagem em dispositivos móveis */
+            }
+
+            .btn {
+                width: 100%;
+            }
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-form">
+            <h2>Login</h2>
+            <form>
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="Digite seu email" required>
+                </div>
+                <div class="input-group">
+                    <label for="name">Nome</label>
+                    <input type="text" id="name" placeholder="Digite seu nome" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" placeholder="Digite sua senha" required>
+                </div>
+                <button type="submit" class="btn">Entrar</button>
+                <button type="button" class="btn">Registrar-se</button>
+            </form>
+            <p><a href="#">Esqueci minha senha</a></p>
+        </div>
+        <div class="logo">
+            <img src="https://via.placeholder.com/300" alt="Logo">
+        </div>
+    </div>
+</body>
+</html>

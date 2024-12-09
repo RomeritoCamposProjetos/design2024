@@ -9,6 +9,10 @@ Nesta página, você tem acesso aos slides da disciplina.
     - [Atividades](https://github.com/RomeritoCamposProjetos/design2024/tree/main/slides/13_css/atividades)
 - [media](../slides/14_css/media.pdf)
 
+## Listas - Exercícios
+
+- [Lista: @media + Flexbox](../materials/listas/css/all.md)
+
 ## Avaliações
 
 - [Avaliações - Código Fonte](https://github.com/RomeritoCamposProjetos/design2024/tree/main/avaliacoes/b3/av1)
