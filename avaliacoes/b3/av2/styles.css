@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    height: 100vh;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    position: relative;
+    padding: 20px 20px 20px 0;
+}
+
+.sidebar {
+    display: flex;
+    position: absolute;
+    height: calc(100% - 80px);
+    background-color: salmon;
+    width: 250px;
+    top: 40px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar ul {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 10px;
+}
+
+.sidebar a {
+    display: inline-block;
+    text-align: center;
+    width: 100px;
+    border-radius: 10px;
+    background-color: cyan;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: black
+}
+
+.content {
+    display: flex;
+    background-color: cyan;
+    flex: 1;
+    margin-left: 210px;
+    padding: 30px 30px 30px 60px;
+    gap: 10px;
+}
+
+.bloco1, .bloco2 {
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1;
+    gap: 20px;
+    overflow-y: scroll;
+    padding: 0 20px;
+}
+
+.card {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 10px;
+    background-color: white;
+    padding: 10px;
+}
+.card h2 {
+    border-bottom: 1px solid black;
+    text-align: right;
+    padding: 5px;
+}
+.card p {
+    padding: 5px;
+}
+
+
+@media screen and (max-width: 768px) {
+    
+    body {
+        height: 100%;
+    }
+    .container {
+        padding-left: 20px;
+    }
+
+    .content {
+        flex-flow: column nowrap;
+        margin-left: 0;
+        margin-top: 60px;
+        padding: 0;
+        padding-top: 30px;
+        padding-bottom: 20px;
+    }
+
+    .bloco1, .bloco2 {
+        overflow: unset;
+        width: 100%;
+        flex: 1;
+    }
+
+    .sidebar {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 80px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+    }
+    .sidebar ul {
+        display: flex;
+        flex-flow: row nowrap;
+    }
+
+    .sidebar a {
+        width: 60px
+    }
+
+}

@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    list-style: none;
+}
+
+body {
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+    margin: 0 20px;
+}
+
+/* -------------- header -------------- */
+.container header {
+    border-bottom: 2px solid black;
+}
+
+header ul {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    gap: 20px;
+}
+
+header ul a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+/* ------------------------------------- */
+
+/* -------------- main --------------*/
+
+main {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+}
+
+article {
+    display: flex;
+    flex: 1 1;
+}
+
+.cards {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.cards div {
+    flex: 1 0 300px;
+    background-color: antiquewhite;
+    height: 300px;
+}
+
+.sidebar {
+    display: flex;
+    flex: 0 0 25%;
+}
+
+.sidebar div {
+    display: flex;
+    flex-flow: column;
+    flex: 1 0 300px;
+    gap: 20px;
+}
+
+.sidebar div {
+    flex: 1 0 300px; 
+}
+
+.roxo {
+    background-color: blueviolet;
+}
+
+.yellow {
+    background-color: yellowgreen;
+}
+
+/* ------------- media ------------- */
+
+@media screen and (max-width: 768px) {
+
+    main {
+        flex-flow: column;
+        gap: 20px;
+    }
+
+    header ul {
+        justify-content: center;
+    }
+    
+}
